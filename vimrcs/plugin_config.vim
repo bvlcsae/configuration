@@ -1,18 +1,14 @@
-" YCM设置
-let g:ycm_semantic_triggers =  {
-		\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-		\ 'cs,lua,javascript': ['re!\w{2}'],
-		\ }
-
-
 " NerdTree 设置
 map <C-f> :NERDTreeToggle<CR>
 "当NERDTree为剩下的唯一窗口时自动关闭
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd vimenter * NERDTree  "自动开启Nerdtree
 autocmd VimEnter * wincmd w
+
 let g:NERDTreeWinSize = 28 " Nerdtree大小
+let g:NERDTreeWinPos='right' " Nerdtree位置
 let g:NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " 设置树的显示图标
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -31,9 +27,8 @@ let g:NERDTreeIndicatorMapCustom = {
         \ 'Ignored'   : '☒',
         \ "Unknown"   : "?"
     \ }
-let g:NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
-let g:NERDTreeHidden=0     "不显示隐藏文件
 
+let g:NERDTreeHidden=0     "不显示隐藏文件
 
 " airline settings.
 let g:airline_theme = 'simple'
