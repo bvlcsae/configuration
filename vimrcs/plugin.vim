@@ -6,7 +6,7 @@ Plug 'vim-scripts/phd'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" 延迟按需加载，使用到命令的时候再加载或者打开对应文件类型才加载
+"  延迟按需加载，使用到命令的时候再加载或者打开对应文件类型才加载
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 

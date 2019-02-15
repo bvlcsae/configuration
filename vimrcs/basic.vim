@@ -36,6 +36,7 @@ let mapleader = ";"
 nmap <leader>w :w!<cr>
 " 定义快捷键关闭当前分割窗口
 nmap <leader>q :q<cr>
+nmap <leader>wq :wq<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -204,10 +205,10 @@ map <space> /
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
-map <leader>jw <C-W>j
-map <leader>kw <C-W>k
-map <leader>hw <C-W>h
-map <leader>lw <C-W>l
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
@@ -215,8 +216,8 @@ map <leader>bd :Bclose<cr>:tabclose<cr>gT
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
-map <C-l> :bnext<cr>
-map <C-h> :bprevious<cr>
+map <leader>l :bnext<cr>
+map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
