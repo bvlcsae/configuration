@@ -19,6 +19,10 @@ Plug 'Valloric/YouCompleteMe' " 代码补全
 Plug 'Raimondi/delimitMate' " 括号补全
 Plug 'nathanaelkane/vim-indent-guides' " 缩进提示
 Plug 'octol/vim-cpp-enhanced-highlight' " cpp语法高亮
+Plug 'easymotion/vim-easymotion' " 快速移动
+Plug 'sheerun/vim-polyglot' " 高亮支持
+Plug 'pangloss/vim-javascript' " js支持
+Plug 'elzr/vim-json' " vimjson
 " 插件列表结束
 call plug#end()
 
