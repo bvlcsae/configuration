@@ -23,6 +23,8 @@ Plug 'easymotion/vim-easymotion' " 快速移动
 Plug 'sheerun/vim-polyglot' " 高亮支持
 Plug 'pangloss/vim-javascript' " js支持
 Plug 'elzr/vim-json' " vimjson
+Plug 'ludovicchabant/vim-gutentags' "  自动增量更新ctags，确定工作目录
+
+" Plug 'posva/vim-vue' " vue支持
 " 插件列表结束
 call plug#end()
-

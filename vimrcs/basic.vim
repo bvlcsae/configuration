@@ -137,7 +137,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set lines=999 columns=999
-    set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h18
+    set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h14
     set guioptions-=L       " 隐藏左侧滚动条
     set guioptions-=r       " 隐藏右侧滚动条
     set guioptions-=b       " 隐藏底部滚动条
