@@ -20,11 +20,10 @@ Plug 'Raimondi/delimitMate' " 括号补全
 Plug 'nathanaelkane/vim-indent-guides' " 缩进提示
 Plug 'octol/vim-cpp-enhanced-highlight' " cpp语法高亮
 Plug 'easymotion/vim-easymotion' " 快速移动
-Plug 'sheerun/vim-polyglot' " 高亮支持
+Plug 'sheerun/vim-polyglot' " 多种语言支持，高亮支持
 Plug 'pangloss/vim-javascript' " js支持
 Plug 'elzr/vim-json' " vimjson
 Plug 'ludovicchabant/vim-gutentags' "  自动增量更新ctags，确定工作目录
-
-" Plug 'posva/vim-vue' " vue支持
+Plug 'posva/vim-vue' " vue支持
 " 插件列表结束
 call plug#end()

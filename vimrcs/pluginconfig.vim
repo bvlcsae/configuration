@@ -43,10 +43,10 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+let g:airline_left_sep = ''  " 
+let g:airline_left_alt_sep = '' " 
+let g:airline_right_sep = '' " 
+let g:airline_right_alt_sep = '' " 
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ' '
@@ -67,7 +67,7 @@ let g:tagbar_autofocus = 1 " 这是tagbar一打开，光标即在tagbar页面内
 " =================================================
 
 "======================= YCM设置 =====================
-let g:ycm_server_python_interpreter='/usr/bin/python'
+" let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 set completeopt=longest,menu	"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -135,6 +135,7 @@ let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black
 
+
 " ====================================================
 " delimitMate 括号补全
 " ===================================================
@@ -142,6 +143,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 " 关闭某些类型文件的自动补全
 au FileType mail let b:delimitMate_autoclose = 0
+
 
 " ===================================================
 " vim-javascript
@@ -186,3 +188,12 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 if !isdirectory(s:vim_tags)
     silent! call mkdir(s:vim_tags, 'p')
 endif
+
+" =====================================================
+" emmet-vim  HTML标签快速编辑
+" ===================================================
+let g:user_emmet_leader_key='<C-e>'
+
+
+let g:html_exclude_tags = ['html', 'style', 'script', 'body']
+let g:html_indent_inctags = "body,head,tbody,div" 	" 缩进body head
