@@ -1,5 +1,5 @@
 " Enable filetype plugins
-filetype on
+filetype off
 filetype plugin on
 filetype indent on
 

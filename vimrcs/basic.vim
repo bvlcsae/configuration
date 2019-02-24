@@ -182,7 +182,7 @@ set si "Smart indent
 set wrap "Wrap lines
 set cindent
 set foldmethod=syntax
-set foldlevelstart=999
+set foldlevelstart=999 "折叠等级
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -259,9 +259,6 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
@@ -343,24 +340,24 @@ function! <SID>BufcloseCloseIt()
     endif
 
     if buflisted(l:currentBufNum)
-        execute("bdelete! ".l:currentBufNum)
-    endif
-endfunction
+            execute("bdelete! ".l:currentBufNum)
+        endif
+    endfunction
 
-function! CmdLine(str)
-    call feedkeys(":" . a:str)
-endfunction
+    function! CmdLine(str)
+        call feedkeys(":" . a:str)
+    endfunction
 
-function! VisualSelection(direction, extra_filter) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
+    function! VisualSelection(direction, extra_filter) range
+        let l:saved_reg = @"
+        execute "normal! vgvy"
 
-    let l:pattern = escape(@", "\\/.*'$^~[]")
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
+        let l:pattern = escape(@", "\\/.*'$^~[]")
+        let l:pattern = substitute(l:pattern, "\n$", "", "")
 
-    if a:direction == 'gv'
-        call CmdLine("Ack '" . l:pattern . "' " )
-    elseif a:direction == 'replace'
+        if a:direction == 'gv'
+            call CmdLine("Ack '" . l:pattern . "' " )
+        elseif a:direction == 'replace'
         call CmdLine("%s" . '/'. l:pattern . '/')
     endif
 

@@ -143,6 +143,8 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 " 关闭某些类型文件的自动补全
 au FileType mail let b:delimitMate_autoclose = 0
+let delimitMate_matchpairs = "(:),[:],{:},<:>"
+imap 'w <Plug>delimitMateS-Tab
 
 
 " ===================================================
