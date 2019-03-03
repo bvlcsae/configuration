@@ -67,8 +67,8 @@ let g:tagbar_autofocus = 1 " 这是tagbar一打开，光标即在tagbar页面内
 " =================================================
 
 "======================= YCM设置 =====================
-" let g:ycm_server_python_interpreter='/usr/bin/python'
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_server_python_interpreter='/usr/bin/python'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 set completeopt=longest,menu	"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif	"离开插入模式后自动关闭预览窗口

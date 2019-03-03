@@ -25,5 +25,11 @@ Plug 'pangloss/vim-javascript' " js支持
 Plug 'elzr/vim-json' " vimjson
 Plug 'ludovicchabant/vim-gutentags' "  自动增量更新ctags，确定工作目录
 Plug 'posva/vim-vue' " vue支持
+" ========================
+" mardown
+" =======================
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown' " markdown支持
+Plug 'suan/vim-instant-markdown' " markdown实时显示 
 " 插件列表结束
 call plug#end()
