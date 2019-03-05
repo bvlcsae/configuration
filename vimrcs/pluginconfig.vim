@@ -37,19 +37,12 @@ let g:NERDTreeHidden=0     "不显示隐藏文件
 
 " ============ airline ======================
 let g:airline_theme = 'bubblegum'
-let g:airline_powerline_fonts = 1
-
+" let g:airline_powerline_fonts = 1
+set ambiwidth=double
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-let g:airline_left_sep = ''  " 
-let g:airline_left_alt_sep = '' " 
-let g:airline_right_sep = '' " 
-let g:airline_right_alt_sep = '' " 
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ' '
 let g:airline#extensions#tabline#enabled = 1
 " show absolute file path in status line
 let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
@@ -62,7 +55,7 @@ map <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_left = 1 
 let g:tagbar_sort = 0 "设置标签不排序，默认排序
 let g:tagbar_width = 30  "设置tagbar的宽度为30列，默认40
-let g:tagbar_ctags_bin = 'ctags' " tagbar以来ctags插件
+let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_autofocus = 1 " 这是tagbar一打开，光标即在tagbar页面内，默认在vim打开的文件内
 " =================================================
 
@@ -99,6 +92,7 @@ let g:ycm_key_invoke_completion = '<c-z>'
 " ===================================================
 
 " ==================== ALE =========================
+let g:ale_sign_column_always = 1 " 保持侧边栏可见
 let g:ale_set_highlights = 0
 "自定义error和warning图标
 let g:ale_sign_error = '✗'
@@ -118,12 +112,13 @@ nmap sn <Plug>(ale_next_wrap)
 nmap <Leader>s :ALEToggle<CR>
 "<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
+let g:ale_javascript_eslint_executable = ''
 let g:ale_linters = {
             \   'c++': ['clang'],
             \   'c': ['clang'],
             \   'python': ['pylint'],
+            \   'javascript': []
             \}
-" =================================================
 
 
 " =================================================
@@ -140,6 +135,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black
 " delimitMate 括号补全
 " ===================================================
 " for python docstring ", 特别有用
+autocmd FileType vue let b:delimitMate_autoclose = 1
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 " 关闭某些类型文件的自动补全
 au FileType mail let b:delimitMate_autoclose = 0
@@ -199,3 +195,58 @@ let g:user_emmet_leader_key='<C-e>'
 
 let g:html_exclude_tags = ['html', 'style', 'script', 'body']
 let g:html_indent_inctags = "body,head,tbody,div" 	" 缩进body head
+
+" ==========================================
+" vim-vue
+" ==========================================
+let g:vue_disable_pre_processors=1
+
+
+"  to use nerdcommenter with vue files, you can use its "hooks" feature to temporarily change the filetype. click for an example.
+let g:nERDCustomDelimiters = {
+            \  'javascript.jsx': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+            \  'sass.scss': { 'left': '/**', 'right': '*/' }
+        \ }
+let g:ft = ''
+function! NERDCommenter_before()
+  if &ft == 'vue'
+    let g:ft = 'vue'
+    let stack = synstack(line('.'), col('.'))
+    if len(stack) > 0
+      let syn = synIDattr((stack)[0], 'name')
+      if len(syn) > 0
+        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
+      endif
+    endif
+  endif
+endfunction
+function! NERDCommenter_after()
+  if g:ft == 'vue'
+    setf vue
+    let g:ft = ''
+  endif
+endfunction
+" Add your own custom formats or override the defaults
+
+" ===========================
+" mxw/vim-jsx jsx支持
+" ==========================
+let g:jsx_ext_required = 0
+let g:jsx_pragma_required=0
+
+
+" =========================
+" Ack.vim
+" ========================
+map ;F :Ack<space>
+
+
+" ===========================
+" undotree
+" ===========================
+if has("persistent_undo")
+    set undodir=$HOME/.vim/.undodir/
+    set undofile
+    set undolevels=1000
+    set undoreload=10000
+endif

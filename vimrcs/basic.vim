@@ -159,7 +159,6 @@ set nobackup
 set nowb
 set noswapfile
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -367,6 +366,7 @@ endfunction
 
 " my configs
 set nu
+set relativenumber
 set cursorline
 
 if has("autocmd")

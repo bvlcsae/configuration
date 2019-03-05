@@ -74,7 +74,9 @@ inoremap '4 {<esc>o}<esc>O
 
 " my custom
 " special enter can be used in html indent
-inoremap '' <cr><tab><cr><up><tab>
+" inoremap '' <cr><tab><cr><esc>ki<tab>   
+inoremap '' <cr><cr><esc>ka<tab>
+
 
 " File path tip
 inoremap <leader>f <C-x><C-f>

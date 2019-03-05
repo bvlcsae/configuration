@@ -2,12 +2,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 Plug 'vim-scripts/phd'
+Plug 'morhetz/gruvbox'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim' " 文件搜索
 Plug 'terryma/vim-multiple-cursors' " 多光标编辑
-Plug 'w0rp/ale' " 语法提示
+Plug 'w0rp/ale' " 语法提示, *lint
 Plug 'majutsushi/tagbar' " 函数列表
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -24,7 +25,21 @@ Plug 'sheerun/vim-polyglot' " 多种语言支持，高亮支持
 Plug 'pangloss/vim-javascript' " js支持
 Plug 'elzr/vim-json' " vimjson
 Plug 'ludovicchabant/vim-gutentags' "  自动增量更新ctags，确定工作目录
-Plug 'posva/vim-vue' " vue支持
+Plug 'mbbill/undotree' " undotree 撤销操作
+" 全局搜索字符串插件
+Plug 'mileszs/ack.vim'
+" Plug 'dyng/ctrlsf.vim'
+
+" vue支持
+Plug 'posva/vim-vue' 
+
+" jsx 支持
+Plug 'mxw/vim-jsx'
+
+" 小程序支持
+Plug 'chemzqm/wxapp.vim'
+
+
 " ========================
 " mardown
 " =======================
