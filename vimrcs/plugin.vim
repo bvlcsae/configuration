@@ -25,9 +25,10 @@ Plug 'sheerun/vim-polyglot' " 多种语言支持，高亮支持
 Plug 'pangloss/vim-javascript' " js支持
 Plug 'elzr/vim-json' " vimjson
 Plug 'ludovicchabant/vim-gutentags' "  自动增量更新ctags，确定工作目录
+
 Plug 'mbbill/undotree' " undotree 撤销操作
 " 全局搜索字符串插件
-Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
 " Plug 'dyng/ctrlsf.vim'
 
 " vue支持

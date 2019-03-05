@@ -236,9 +236,9 @@ let g:jsx_pragma_required=0
 
 
 " =========================
-" Ack.vim
+" ag.vim
 " ========================
-map ;F :Ack<space>
+map ;F :Ag<space>
 
 
 " ===========================
@@ -250,3 +250,4 @@ if has("persistent_undo")
     set undolevels=1000
     set undoreload=10000
 endif
+nnoremap <F5> :UndotreeToggle<cr>
