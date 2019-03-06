@@ -239,15 +239,3 @@ let g:jsx_pragma_required=0
 " ag.vim
 " ========================
 map ;F :Ag<space>
-
-
-" ===========================
-" undotree
-" ===========================
-if has("persistent_undo")
-    set undodir=$HOME/.vim/.undodir/
-    set undofile
-    set undolevels=1000
-    set undoreload=10000
-endif
-nnoremap <F5> :UndotreeToggle<cr>

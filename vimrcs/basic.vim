@@ -64,7 +64,7 @@ endif
 set ruler
 
 " Height of the command bar
-set cmdheight=1
+set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
 set hid
