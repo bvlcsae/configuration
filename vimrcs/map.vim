@@ -69,8 +69,7 @@ nnoremap gj j
 inoremap '1 ()<esc>i
 inoremap '2 []<esc>i
 inoremap '3 {}<esc>i
-
-inoremap '4 {<esc>o}<esc>O
+inoremap '4 {<esc>o}<esc>O<tab>
 
 " my custom
 " special enter can be used in html indent

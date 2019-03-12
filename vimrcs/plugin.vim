@@ -1,9 +1,13 @@
 call plug#begin('~/.vim/plugged')
+" ==========================================
+" colors
+" ==========================================
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 Plug 'vim-scripts/phd'
 Plug 'morhetz/gruvbox'
 
+" ==========================================
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim' " 文件搜索
@@ -39,7 +43,6 @@ Plug 'mxw/vim-jsx'
 
 " 小程序支持
 Plug 'chemzqm/wxapp.vim'
-
 
 " ========================
 " mardown

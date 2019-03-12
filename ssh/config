@@ -1,0 +1,13 @@
+# Host node_collet
+
+
+
+# --- Sourcetree Generated ---
+Host bvlcsae-GitHub
+	HostName github.com
+	User bvlcsae
+	PreferredAuthentications publickey
+	IdentityFile /Users/braen/.ssh/bvlcsae-GitHub
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------

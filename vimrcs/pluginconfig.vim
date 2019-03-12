@@ -204,7 +204,7 @@ let g:vue_disable_pre_processors=1
 
 "  to use nerdcommenter with vue files, you can use its "hooks" feature to temporarily change the filetype. click for an example.
 let g:nERDCustomDelimiters = {
-            \  'javascript.jsx': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+            \  'javascript.jsx': { 'left': '//', 'leftAlt': '/**', 'rightAlt': '*/' },
             \  'sass.scss': { 'left': '/**', 'right': '*/' }
         \ }
 let g:ft = ''
@@ -239,3 +239,11 @@ let g:jsx_pragma_required=0
 " ag.vim
 " ========================
 map ;F :Ag<space>
+
+
+
+" =============================
+" plasticboy/vim-markdown
+" ============================
+" let g:vim_markdown_no_default_key_mappings = 1
+" let g:vim_markdown_toc_autofit = 1
