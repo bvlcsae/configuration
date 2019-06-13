@@ -1,7 +1,3 @@
-# Host node_collet
-
-
-
 # --- Sourcetree Generated ---
 Host bvlcsae-GitHub
 	HostName github.com
@@ -10,4 +6,20 @@ Host bvlcsae-GitHub
 	IdentityFile /Users/braen/.ssh/bvlcsae-GitHub
 	UseKeychain yes
 	AddKeysToAgent yes
+
+Host gitee.com
+    HostName gitee.com
+    User braen
+    IdentityFile ~/.ssh/id_rsa_gitee
+    IdentitiesOnly yes
 # ----------------------------
+#
+
+Host bmx
+    HostName five2zero.com
+    User baimengxi
+    IdentityFile  ~/.ssh/five2zero
+
+Host *
+    ServerAliveInterval 60
+# ServerAliveCountMax INT_MAX
